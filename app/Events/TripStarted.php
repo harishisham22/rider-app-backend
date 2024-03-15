@@ -2,6 +2,8 @@
 
 namespace App\Events;
 
+use Apps\Models\Trip;
+use Apps\Models\User;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;

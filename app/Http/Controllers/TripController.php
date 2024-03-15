@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\TripCreated;
+use App\Events\TripStarted;
+use App\Events\TripEnded;
+use App\Events\TripAccepted;
+use App\Events\TripLocationUpdated;
 use Illuminate\Http\Request;
 
 class TripController extends Controller

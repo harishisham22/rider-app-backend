@@ -2,6 +2,8 @@
 
 namespace App\Events;
 
+use Apps\Models\Trip;
+use Apps\Models\User;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -10,7 +12,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class TripStarted
+class TripCreated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
@@ -20,7 +22,7 @@ class TripStarted
     /**
      * Create a new event instance.
      */
-    public function __construct(Trip $trip, User $user)
+    public function __construct($trip, $user)
     {
         $this->trip = $trip;
         $this->user = $user;
